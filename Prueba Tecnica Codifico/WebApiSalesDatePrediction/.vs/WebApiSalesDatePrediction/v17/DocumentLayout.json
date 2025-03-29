@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kevin\\OneDrive\\Documentos\\GitHub\\Sales_Date_Predictions\\Prueba Tecnica Codifico\\WebApiSalesDatePrediction\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{747BAC77-40B0-4835-B214-0A716616A90F}|WebApiSalesDatePrediction\\WebApiSalesDatePrediction.csproj|c:\\users\\kevin\\onedrive\\documentos\\github\\sales_date_predictions\\prueba tecnica codifico\\webapisalesdateprediction\\webapisalesdateprediction\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{747BAC77-40B0-4835-B214-0A716616A90F}|WebApiSalesDatePrediction\\WebApiSalesDatePrediction.csproj|solutionrelative:webapisalesdateprediction\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Documentos\\GitHub\\Sales_Date_Predictions\\Prueba Tecnica Codifico\\WebApiSalesDatePrediction\\WebApiSalesDatePrediction\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApiSalesDatePrediction\\appsettings.json",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Documentos\\GitHub\\Sales_Date_Predictions\\Prueba Tecnica Codifico\\WebApiSalesDatePrediction\\WebApiSalesDatePrediction\\appsettings.json",
+              "RelativeToolTip": "WebApiSalesDatePrediction\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-28T18:07:07.533Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

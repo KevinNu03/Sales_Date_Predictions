@@ -1,0 +1,52 @@
+<mat-dialog-content class="custom-dialog-content">
+    <mat-toolbar class="custom-toolbar">
+      <span>{{ data.CustomerName }} - Orders</span>
+    </mat-toolbar>
+  
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      <ng-container matColumnDef="orderid">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Order ID </th>
+        <td mat-cell *matCellDef="let order"> {{order.orderid}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="requireddate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Required Date </th>
+        <td mat-cell *matCellDef="let order"> {{order.requireddate}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="shippeddate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Shipped Date </th>
+        <td mat-cell *matCellDef="let order"> {{order.shippeddate}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="shipname">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ship Name </th>
+        <td mat-cell *matCellDef="let order"> {{order.shipname}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="shipaddress">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ship Address </th>
+        <td mat-cell *matCellDef="let order"> {{order.shipaddress}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="shipcity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ship City </th>
+        <td mat-cell *matCellDef="let order"> {{order.shipcity}} </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <div class="spinner-container" *ngIf="!loaderTable">
+        <app-loading-table></app-loading-table>
+      </div>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons (page)="handlePageEvent($event)">
+    </mat-paginator>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions>
+    <span class="close-button" (click)="closeModal()">CLOSE</span>
+  </mat-dialog-actions>
+  

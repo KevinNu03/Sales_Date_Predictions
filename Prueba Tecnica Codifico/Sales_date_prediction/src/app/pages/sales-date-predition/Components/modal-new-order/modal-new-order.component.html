@@ -1,0 +1,141 @@
+<mat-dialog-content class="custom-dialog-content">
+    <mat-toolbar class="custom-toolbar">
+      <span>{{ data.CustomerName }} - New Orders</span>
+    </mat-toolbar>
+  
+    <form [formGroup]="formNewOrder">
+        <br>
+        <h4>Order</h4>
+        <br>
+        <div class="select-container">
+            <div class="form-floating">
+                <select 
+                    placeholder="Employee*"
+                    id="floatingemployee"
+                    class="form-select"
+                    formControlName="employee"
+                    [ngClass]="{
+                        'is-invalid': formNewOrder.get('employee')?.invalid &&
+                        formNewOrder.get('employee')?.touched
+                    }">
+                    <option *ngFor="let employee of employees" [value]="employee.empid">
+                        {{employee.fullName}}
+                    </option>
+                </select>
+                <label for="floatingemployee">Employee*</label>
+            </div>
+            <div class="form-floating">
+                <select 
+                    placeholder="Shipper*"
+                    id="floatingshipper"
+                    class="form-select"
+                    formControlName="shipper"
+                    [ngClass]="{
+                        'is-invalid': formNewOrder.get('shipper')?.invalid &&
+                        formNewOrder.get('shipper')?.touched
+                    }">
+                    <option *ngFor="let shipper of shippers" [value]="shipper.shipperid">
+                        {{shipper.companyname}}
+                    </option>
+                </select>
+                <label for="floatingshipper">Shipper*</label>
+            </div>
+        </div>    
+        <br>
+        <div class="form-floating">
+            <input type="text" class="form-control" formControlName="shipName" id="floatingshipName" placeholder="Ship Name*" maxlength="80">
+            <label for="floatingshipName">Ship Name*</label>
+        </div>  
+        <br>  
+        <div class="select-container">
+            <div class="form-floating">
+                <input type="text" class="form-control" formControlName="shiAddress" id="floatingshiAddress" placeholder="Ship Address*" maxlength="120">
+                <label for="floatingshiAddress">Ship address*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="text" class="form-control" formControlName="shipCity" id="floatingshipCity" placeholder="Ship City*" maxlength="30">
+                <label for="floatingshipCity">Ship City*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="text" class="form-control" formControlName="shipCountry" id="floatingshipCountry" placeholder="Ship Country*" maxlength="30">
+                <label for="floatingshipCountry">Ship Country*</label>
+            </div>  
+        </div>   
+        <br>
+        <div class="select-container">
+            <div class="form-floating">
+                <input type="date" class="form-control" formControlName="orderDate" id="floatingorderDate" placeholder="Order Date*" >
+                <label for="floatingorderDate">Order Date*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="date" class="form-control" formControlName="requiredDate" id="floatingrequiredDate" placeholder="Required Date*" >
+                <label for="floatingrequiredDate">Required Date*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="date" class="form-control" formControlName="shippedDate" id="floatingshippedDate" placeholder="Shipped Date*">
+                <label for="floatingshippedDate">Shipped Date*</label>
+            </div>  
+        </div>   
+        <br>
+        <div class="form-floating">
+            <input type="number" class="form-control" formControlName="freight" id="floatingfreight" placeholder="Freight*" 
+            [ngClass]="{
+                'is-invalid': formNewOrder.get('freight')?.invalid &&
+                formNewOrder.get('freight')?.touched
+            }">
+            <label for="floatingfreight">$ Freight*</label>
+        </div>  
+        <hr>
+        <h4>Order Details</h4>
+        <br>
+        <div class="form-floating">
+            <select 
+                placeholder="Products*"
+                id="floatingproduct"
+                class="form-select"
+                formControlName="product"
+                [ngClass]="{
+                    'is-invalid': formNewOrder.get('product')?.invalid &&
+                    formNewOrder.get('product')?.touched
+                }">
+                <option *ngFor="let product of products" [value]="product.productid">
+                    {{product.productname}}
+                </option>
+            </select>
+            <label for="floatingproduct">Product*</label>
+        </div>  
+        <br>
+        <div class="select-container">
+            <div class="form-floating">
+                <input type="number" class="form-control" formControlName="unitPrice" id="floatingunitPrice" placeholder="Unit Price*"
+                [ngClass]="{
+                    'is-invalid': formNewOrder.get('unitPrice')?.invalid &&
+                    formNewOrder.get('unitPrice')?.touched
+                }">
+                <label for="floatingunitPrice">$ Unit Price*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="number" class="form-control" formControlName="quantity" id="floatingquantity" placeholder="Quantity*"
+                [ngClass]="{
+                    'is-invalid': formNewOrder.get('quantity')?.invalid &&
+                    formNewOrder.get('quantity')?.touched
+                }">
+                <label for="floatingquantity">Quantity*</label>
+            </div>  
+            <div class="form-floating">
+                <input type="number" class="form-control" formControlName="discount" id="floatingdiscount" placeholder="Discount*"
+                [ngClass]="{
+                    'is-invalid': formNewOrder.get('discount')?.invalid &&
+                    formNewOrder.get('discount')?.touched
+                }">
+                <label for="floatingdiscount">Discount*</label>
+            </div>  
+        </div> 
+    </form>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions class="dialog-actions">
+    <span class="button" (click)="closeModal()">CLOSE</span>
+    <span class="button" (click)="saveOrder()" *ngIf="!formNewOrder.invalid">SAVE</span>
+  </mat-dialog-actions>
+  

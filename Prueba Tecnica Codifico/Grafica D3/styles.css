@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+input, button {
+    margin: 10px;
+    padding: 5px;
+}
+
+svg {
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+}
+
+/* Agregamos transiciones para animación */
+rect {
+    transition: all 0.3s ease-in-out;
+}

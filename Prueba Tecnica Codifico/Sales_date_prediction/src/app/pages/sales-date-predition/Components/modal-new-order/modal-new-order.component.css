@@ -1,0 +1,28 @@
+.custom-dialog-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .custom-toolbar {
+    background-color: #4CAF50; 
+    color: white;
+    font-weight: bold;
+  }
+  
+  .select-container {
+    display: flex;
+    gap: 20px; 
+    width: 100%; 
+}
+
+.select-container .form-floating {
+    flex: 1; 
+    min-width: 250px; 
+}
+
+.button{
+  color: green;
+  padding: 10px;
+  cursor: pointer;
+}
